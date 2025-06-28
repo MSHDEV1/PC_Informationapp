@@ -64,14 +64,14 @@ namespace pcinformation
             }
             foreach (ManagementObject ramv2 in ram.Get())
             {
-                label23.Text = ramv2["Speed"].ToString() + "MHz";
+                label23.Text = ramv2["Speed"].ToString();
                 
             }
             foreach (ManagementObject ramv3 in ram2.Get())
             {
 
                 double total = Convert.ToDouble(ramv3["TotalVisibleMemorySize"]) / (1024.0*1024.0);
-                label25.Text = total.ToString("0.00" + "GB");
+                label25.Text = total.ToString("0.00");
                 label27.Text = ramv3["OSArchitecture"].ToString();
                 label29.Text = ramv3["Caption"].ToString();
             }
@@ -94,7 +94,7 @@ namespace pcinformation
                 label32.Text = ramv3["NumberOfProcesses"].ToString();
                 label34.Text = totalv3.ToString("0.00" +"GB");
                 double ram =Convert.ToDouble(ramv3["FreePhysicalMemory"]) / (1024.0*1024.0);
-                label36.Text = ram.ToString("0.000"+"GB");
+                label36.Text = ram.ToString("0.000");
             }
         }
     }
